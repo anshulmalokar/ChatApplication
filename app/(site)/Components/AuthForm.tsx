@@ -2,6 +2,7 @@
 
 import Button from "@/app/Components/Button";
 import Input from "@/app/Components/Inputs/Input";
+import axios from "axios";
 import { useCallback, useState } from "react";
 import {
   FieldValue,
@@ -39,11 +40,11 @@ export default function AuthForm({}: Props) {
     },
   });
 
-  const onSubmit: SubmitHandler<FieldValues> = (data) => {
+  const onSubmit: SubmitHandler<FieldValues> = async (data) => {
     setIsLoading(true);
 
     if (varient === "REGISTER") {
-      // Axios Register
+        await axios.post('/api/register',data)
     }
     if (varient === "LOGIN") {
       // Next auth sign in

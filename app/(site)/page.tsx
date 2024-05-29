@@ -23,8 +23,8 @@ export default function Home() {
         >
           <Image
             alt="logo"
-            width="1"
-            height="1"
+            width="32"
+            height="32"
             className="mx-auto w-auto"
             src="/images/logo.png"
           />
